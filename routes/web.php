@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//gender0
+//listar genero
+Route::get('/listg','GeneroController@list');
+//formulario genero
+Route::get('/formg', 'GeneroController@generoform');
+//guardar genero
+Route::post('/saveg', 'GeneroController@save')->name('saveg');
+
+//estudiante
+//listar estudiante
+Route::get('/liste','EstudianteController@list');
+//formulario Estudiante
+Route::get('/forme', 'EstudianteController@estudianteform');
+//guardar Estudiante
+Route::post('/savee', 'EstudianteController@save')->name('savee');
+
